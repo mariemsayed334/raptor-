@@ -59,7 +59,7 @@ export default function Home() {
             <div className="text-center">
               <div className="w-150 h-96 mx-auto mb-8 relative">
                 <img
-                  src="/all.jpeg"
+                  src="/images/all.jpeg"
                   alt="all Supplement"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />

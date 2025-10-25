@@ -57,7 +57,7 @@ export default function Home() {
         <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <div className="w-full max-w-4xl h-[500px] md:h-[600px] lg:h-[700px] mx-auto mb-8 relative">
+              <div className="w-full max-w-4xl h-[200px] md:h-[300px] lg:h-[600px] mx-auto mb-8 relative">
   <img
     src="/images/all.jpeg"
     alt="All Supplement"

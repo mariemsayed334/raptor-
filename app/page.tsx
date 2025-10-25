@@ -57,14 +57,15 @@ export default function Home() {
         <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <div className="w-32 md:w-48 lg:w-[150px] h-96 mx-auto mb-8 relative">
-                <img
-                  src="/images/all.jpeg"
-                  alt="all Supplement"
-                  className="w-full h-full object-contain drop-shadow-2xl"
-                />
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mx-8">
+              <div className="w-full max-w-4xl h-[500px] md:h-[600px] lg:h-[700px] mx-auto mb-8 relative">
+  <img
+    src="/images/all.jpeg"
+    alt="All Supplement"
+    className="w-full h-full object-cover rounded-2xl drop-shadow-2xl"
+  />
+</div>
+
+              <div className="bg-white/10 rounded-lg p-4 mx-8" style={{ backdropFilter: 'blur(4px)' }}>
                 <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">Nutrition Facts</h3>
                 <div className="text-white space-y-3">
                   <div className="flex justify-between items-center border-b border-white/20 pb-2">
@@ -85,13 +86,13 @@ export default function Home() {
           </div>
 
           <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center" style={{ backdropFilter: 'blur(4px)' }}>
               <Facebook className="w-5 h-5 text-white" />
             </div>
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center" style={{ backdropFilter: 'blur(4px)' }}>
               <Instagram className="w-5 h-5 text-white" />
             </div>
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center" style={{ backdropFilter: 'blur(4px)' }}>
               <MessageCircle className="w-5 h-5 text-white" />
             </div>
           </div>

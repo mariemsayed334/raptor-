@@ -11,6 +11,7 @@ export default function ContactPage() {
       {/* Header */}
       <Header />
 
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">

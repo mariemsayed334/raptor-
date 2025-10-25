@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     "Premium nutrition supplements, wellness products, and natural cosmetics designed to enhance your health and performance.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({

@@ -57,7 +57,7 @@ export default function Home() {
         <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <div className="w-150 h-96 mx-auto mb-8 relative">
+              <div className="w-32 md:w-48 lg:w-[150px] h-96 mx-auto mb-8 relative">
                 <img
                   src="/images/all.jpeg"
                   alt="all Supplement"
@@ -510,7 +510,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <Card className="border-0 shadow-lg">
             <CardContent className="p-8 text-center">
-             <div className="w-180 h-180 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+             <div className="w-[180px] h-[180px] bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
   <img
     src="/jack.png"
     alt="Jack Nitzsche"

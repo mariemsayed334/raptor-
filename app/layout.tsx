@@ -6,12 +6,14 @@ import "./globals.css"
 import { CartProvider } from "@/contexts/cart-context"
 
 export const metadata: Metadata = {
-  title: "Sublivita - Premium Nutrition & Wellness",
+  title: " Raptor ",
   description:
     "Premium nutrition supplements, wellness products, and natural cosmetics designed to enhance your health and performance.",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/raptor-logo.png",
+    shortcut: "/raptor-logo.png",
+    apple: "/raptor-logo.png",
   },
 }
 

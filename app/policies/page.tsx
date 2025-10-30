@@ -17,7 +17,7 @@ export default function PoliciesPage() {
           <div className="space-y-8">
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-purple-600 mb-4">Shipping Policy</h2>
+                <h2 className="text-2xl font-bold text-green-600 mb-4">Shipping Policy</h2>
                 <div className="space-y-4 text-gray-600">
                   <p>We offer free shipping on all orders within the UK.</p>
                   <p>Orders are processed within 1-2 business days and typically arrive within 3-5 business days.</p>
@@ -29,7 +29,7 @@ export default function PoliciesPage() {
 
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-purple-600 mb-4">Return Policy</h2>
+                <h2 className="text-2xl font-bold text-green-600 mb-4">Return Policy</h2>
                 <div className="space-y-4 text-gray-600">
                   <p>We accept returns within 30 days of purchase for unopened products.</p>
                   <p>Products must be in original packaging and condition.</p>
@@ -41,7 +41,7 @@ export default function PoliciesPage() {
 
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-purple-600 mb-4">Terms & Conditions</h2>
+                <h2 className="text-2xl font-bold text-green-600 mb-4">Terms & Conditions</h2>
                 <div className="space-y-4 text-gray-600">
                   <p>By using our website and purchasing our products, you agree to these terms and conditions.</p>
                   <p>

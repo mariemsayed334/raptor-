@@ -1,8 +1,10 @@
 "use client"
+import { useState } from "react"
 import { Search, Filter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Header from "@/components/header"
+import { useCart } from "@/contexts/cart-context"
 import Footer from "@/components/footer"
 import { useRouter } from "next/navigation"
 
@@ -10,82 +12,37 @@ export default function ProductsPage() {
   const router = useRouter()
 
   const products = [
-    {
-      id: 1,
-      name: "Raptor D3+K2",
-      image: "/raptor-d3-k2.jpg",
-      category: "Vitamins",
-    },
-    {
-      id: 2,
-      name: "Raptor Calcium",
-      image: "/raptor-calcium.jpg",
-      category: "Minerals",
-    },
-    {
-      id: 3,
-      name: "Raptor Follic Acid",
-      image: "/raptor-follic-acid.jpg",
-      category: "Vitamins",
-    },
-    {
-      id: 4,
-      name: "Raptor Magnesium",
-      image: "/raptor-magnesium.jpg",
-      category: "Minerals",
-    },
-    {
-      id: 5,
-      name: "Raptor Omega 3",
-      image: "/raptor-omega3.jpg",
-      category: "Health",
-    },
-    {
-      id: 6,
-      name: "Raptor Multivitamin",
-      image: "/raptor-multivitamin.jpg",
-      category: "Vitamins",
-    },
-    {
-      id: 7,
-      name: "Raptor Sleep",
-      image: "/raptor-sleep.jpg",
-      category: "Wellness",
-    },
-    {
-      id: 8,
-      name: "Raptor V-Iron",
-      image: "/raptor-v-iron.jpg",
-      category: "Minerals",
-    },
-    {
-      id: 9,
-      name: "Raptor Vitamin C",
-      image: "/raptor-vitamin-c.jpg",
-      category: "Vitamins",
-    },
+    { id: 1, name: " D3+K2", image: "/raptor-d3-k2.jpg", category: "Vitamins" },
+    { id: 2, name: " Calcium", image: "/raptor-calcium.jpg", category: "Minerals" },
+    { id: 3, name: " Follic Acid", image: "/raptor-follic-acid.jpg", category: "Vitamins" },
+    { id: 4, name: "Magnesium", image: "/raptor-magnesium.jpg", category: "Minerals" },
+    { id: 5, name: " Omega 3", image: "/raptor-omega3.jpg", category: "Health" },
+    { id: 6, name: " Multivitamin", image: "/raptor-multivitamin.jpg", category: "Vitamins" },
+    { id: 7, name: " Sleep", image: "/raptor-sleep.jpg", category: "Wellness" },
+    { id: 8, name: " V-Iron", image: "/raptor-v-iron.jpg", category: "Minerals" },
+    { id: 9, name: " Vitamin C", image: "/raptor-vitamin-c.jpg", category: "Vitamins" },
   ]
 
   const categories = ["All", "Vitamins", "Minerals", "Health", "Wellness"]
 
-  const handleProductClick = (productId: number) => {
-    router.push(`/products/${productId}`)
-  }
+  const [selectedCategory, setSelectedCategory] = useState("All")
+  const [searchTerm, setSearchTerm] = useState("")
 
+  const filteredProducts = products.filter((p) => {
+    const matchCategory =
+      selectedCategory === "All" || p.category === selectedCategory
+    const matchSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchCategory && matchSearch
+  })
+
+  const handleProductClick = (productId: number) => {
+  router.push(`/products/${productId}`)
+}
   return (
     <div className="min-h-screen bg-white">
       <Header />
 
-      <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold mb-6">Our Products</h1>
-          <p className="text-xl text-green-100 max-w-3xl mx-auto">
-            Discover our premium collection of Raptor nutrition supplements designed to enhance your health and
-            performance.
-          </p>
-        </div>
-      </section>
-
+      {/* Filter and Search */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
@@ -95,8 +52,13 @@ export default function ProductsPage() {
                 {categories.map((category) => (
                   <Button
                     key={category}
-                    variant={category === "All" ? "default" : "outline"}
-                    className={category === "All" ? "bg-green-600 hover:bg-green-700" : ""}
+                    variant={selectedCategory === category ? "default" : "outline"}
+                    className={
+                      selectedCategory === category
+                        ? "bg-green-600 hover:bg-green-700 text-white"
+                        : "text-gray-700 border-gray-300 hover:border-green-500"
+                    }
+                    onClick={() => setSelectedCategory(category)}
                   >
                     {category}
                   </Button>
@@ -109,6 +71,8 @@ export default function ProductsPage() {
               <input
                 type="text"
                 placeholder="Search products..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent w-64"
               />
             </div>
@@ -116,26 +80,27 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      {/* Products */}
+      <section className="py-14">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product) => (
+            {filteredProducts.map((product) => (
               <Card
                 key={product.id}
-                className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                className="border-0 shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer rounded-2xl"
                 onClick={() => handleProductClick(product.id)}
               >
                 <CardContent className="p-0">
-                  <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200 h-64 flex items-center justify-center">
+                  <div className="relative overflow-hidden rounded-t-2xl bg-gray-100 h-72 flex items-center justify-center">
                     <img
                       src={product.image || "/placeholder.svg"}
                       alt={product.name}
-                      className="w-40 h-48 object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-4 group-hover:text-green-600 transition-colors text-center">
+                  <div className="p-5">
+                    <h3 className="text-lg font-semibold mb-3 group-hover:text-green-600 transition-colors text-center">
                       {product.name}
                     </h3>
 
@@ -149,20 +114,17 @@ export default function ProductsPage() {
               </Card>
             ))}
           </div>
+
+          {filteredProducts.length === 0 && (
+            <p className="text-center text-gray-500 text-lg mt-10">
+              No products found matching your search.
+            </p>
+          )}
         </div>
       </section>
 
-      <section className="py-16 bg-green-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need Help Choosing?</h2>
-          <p className="text-green-100 mb-8">
-            Our nutrition experts are here to help you find the perfect supplements for your goals.
-          </p>
-          <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold">
-            Get Expert Advice
-          </Button>
-        </div>
-      </section>
+      {/* Bottom Green Section */}
+    
 
       <Footer />
     </div>

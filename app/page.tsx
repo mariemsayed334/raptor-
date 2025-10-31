@@ -93,13 +93,38 @@ import Footer from "@/components/footer"
   <div className="absolute inset-0 flex items-center justify-center">
     <div className="text-center">
       {/* تعديل حجم الصورة لتكون أصغر قليلاً ومتجاوبة */}
-      <div className="w-full max-w-4xl h-[180px] sm:h-[250px] md:h-[300px] lg:h-[400px] mx-auto mb-6 relative">
-        <img
-          src="/images/all.jpeg"
-          alt="All Supplement"
-          className="w-full h-full object-cover rounded-2xl drop-shadow-2xl"
-        />
-      </div>
+      <div className="w-full max-w-5xl mx-auto mb-6 relative px-4">
+  <div
+    className="
+      w-full
+      h-[160px]
+      sm:h-[220px]
+      md:h-[300px]
+      lg:h-[380px]
+      xl:h-[450px]
+      2xl:h-[500px]
+      rounded-2xl
+      overflow-hidden
+    "
+  >
+    <img
+      src="/images/all.jpeg"
+      alt="All Supplement"
+      className="
+        w-full
+        h-full
+        object-cover
+        rounded-2xl
+        drop-shadow-2xl
+        transition-all
+        duration-500
+        ease-in-out
+        hover:scale-[1.02]
+      "
+    />
+  </div>
+</div>
+
 
       {/* صندوق Nutrition Facts */}
       <div

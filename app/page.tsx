@@ -93,16 +93,15 @@ import Footer from "@/components/footer"
   <div className="absolute inset-0 flex items-center justify-center">
     <div className="text-center">
       {/* تعديل حجم الصورة لتكون أصغر قليلاً ومتجاوبة */}
-      <div className="w-full max-w-5xl mx-auto mb-6 relative px-4">
+      <div className="w-full max-w-5xl mx-auto mb-6 relative px-3">
   <div
     className="
       w-full
-      h-[160px]
-      sm:h-[220px]
-      md:h-[300px]
-      lg:h-[380px]
-      xl:h-[450px]
-      2xl:h-[500px]
+      h-[120px]     /* موبايلات صغيرة جدًا */
+      sm:h-[180px]  /* موبايلات متوسطة */
+      md:h-[260px]  /* تابلت */
+      lg:h-[340px]  /* لابتوب */
+      xl:h-[420px]  /* ديسكتوب كبير */
       rounded-2xl
       overflow-hidden
     "
@@ -124,6 +123,7 @@ import Footer from "@/components/footer"
     />
   </div>
 </div>
+
 
 
       {/* صندوق Nutrition Facts */}

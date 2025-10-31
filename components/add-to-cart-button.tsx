@@ -25,17 +25,16 @@ export default function AddToCartButton({
   className = "",
   size = "default",
 }: AddToCartButtonProps) {
-  const { addItem } = useCart()
+  const { addToCart } = useCart()
   const [isAdded, setIsAdded] = useState(false)
 
   const handleAddToCart = () => {
-    addItem({
+    addToCart({
       id: product.id,
       name: product.name,
       price: product.price,
       image: product.image,
       flavor,
-      quantity,
     })
 
     setIsAdded(true)

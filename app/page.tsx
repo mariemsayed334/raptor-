@@ -89,92 +89,86 @@ import Footer from "@/components/footer"
           </div>
         </div>
          
-        <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden">
-          {/* المحتوى الرئيسي */}
-          <div className="flex flex-col items-center justify-center px-4 py-10 sm:py-14 space-y-6">
+       <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden">
+  {/* المحتوى الرئيسي */}
+  <div className="flex flex-col items-center justify-center px-4 py-10 space-y-8 sm:space-y-10">
 
-            {/* الصورة */}
-            <div className="w-full max-w-3xl md:max-w-4xl rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/images/all.jpeg"
-                alt="All Supplement"
-                className="
-                  w-full
-                  h-[160px]        /* موبايل صغير */
-                  sm:h-[220px]     /* موبايل متوسط */
-                  md:h-[300px]     /* تابلت */
-                  lg:h-[380px]     /* لابتوب */
-                  xl:h-[440px]     /* ديسكتوب */
-                  object-cover
-                  rounded-2xl
-                  drop-shadow-2xl
-                  transition-transform
-                  duration-500
-                  ease-in-out
-                  hover:scale-[1.03]
-                "
-              />
-            </div>
+    {/* الصورة */}
+    <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl rounded-2xl overflow-hidden shadow-2xl">
+      <img
+        src="/images/all.jpeg"
+        alt="All Supplement"
+        className="
+          w-full
+          h-[180px]      /* موبايل صغير */
+          sm:h-[220px]   /* موبايل متوسط */
+          md:h-[300px]   /* تابلت */
+          lg:h-[360px]   /* لابتوب */
+          object-cover
+          rounded-2xl
+          drop-shadow-2xl
+          transition-transform
+          duration-500
+          ease-in-out
+          hover:scale-[1.02]
+        "
+      />
+    </div>
 
-            {/* صندوق Nutrition Facts */}
-            <div
-              className="
-                bg-white/20
-                rounded-xl
-                p-5 sm:p-6
-                w-full
-                max-w-md
-                text-white
-                backdrop-blur-md
-                border border-white/20
-                shadow-lg
-                text-center
-              "
-            >
-              <h3 className="font-semibold mb-4 text-base uppercase tracking-wider">
-                Nutrition Facts
-              </h3>
+    {/* صندوق Nutrition Facts */}
+    <div
+      className="
+        bg-white/20
+        rounded-2xl
+        p-5 sm:p-6
+        w-full
+        max-w-sm sm:max-w-md
+        text-white
+        backdrop-blur-md
+        border border-white/20
+        shadow-lg
+        text-center
+      "
+    >
+      <h3 className="font-semibold mb-4 text-base uppercase tracking-wider">
+        Nutrition Facts
+      </h3>
 
-              <div className="space-y-3 text-sm sm:text-base">
-                <div className="flex justify-between items-center border-b border-white/30 pb-2">
-                  <span className="opacity-90">Calories</span>
-                  <span className="font-bold text-lg sm:text-xl">130</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-white/30 pb-2">
-                  <span className="opacity-90">Proteins</span>
-                  <span className="font-bold text-lg sm:text-xl text-yellow-300">24g</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="opacity-90">Trans Fat</span>
-                  <span className="font-bold text-lg sm:text-xl">0g</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* أيقونات التواصل الاجتماعي (تظهر على الديسكتوب فقط) */}
-          <div className="hidden lg:flex flex-col gap-4 absolute right-6 top-1/2 -translate-y-1/2">
-            <div
-              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shadow-md hover:bg-white/30 transition-all duration-300"
-              style={{ backdropFilter: 'blur(6px)' }}
-            >
-              <Facebook className="w-5 h-5 text-white" />
-            </div>
-            <div
-              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shadow-md hover:bg-white/30 transition-all duration-300"
-              style={{ backdropFilter: 'blur(6px)' }}
-            >
-              <Instagram className="w-5 h-5 text-white" />
-            </div>
-            <div
-              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shadow-md hover:bg-white/30 transition-all duration-300"
-              style={{ backdropFilter: 'blur(6px)' }}
-            >
-              <MessageCircle className="w-5 h-5 text-white" />
-            </div>
-          </div>
+      <div className="space-y-3 text-sm sm:text-base">
+        <div className="flex justify-between items-center border-b border-white/30 pb-2">
+          <span className="opacity-90">Calories</span>
+          <span className="font-bold text-lg sm:text-xl">130</span>
         </div>
+        <div className="flex justify-between items-center border-b border-white/30 pb-2">
+          <span className="opacity-90">Proteins</span>
+          <span className="font-bold text-lg sm:text-xl text-yellow-300">24g</span>
         </div>
+        <div className="flex justify-between items-center">
+          <span className="opacity-90">Trans Fat</span>
+          <span className="font-bold text-lg sm:text-xl">0g</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* أيقونات التواصل الاجتماعي (تظهر على الديسكتوب فقط) */}
+  <div className="hidden lg:flex flex-col gap-4 absolute right-6 top-1/2 -translate-y-1/2">
+    {[
+      { Icon: Facebook },
+      { Icon: Instagram },
+      { Icon: MessageCircle },
+    ].map(({ Icon }, i) => (
+      <div
+        key={i}
+        className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shadow-md hover:bg-white/30 transition-all duration-300"
+        style={{ backdropFilter: 'blur(6px)' }}
+      >
+        <Icon className="w-5 h-5 text-white" />
+      </div>
+    ))}
+  </div>
+</div>
+</div>
 
 
 

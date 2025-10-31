@@ -90,104 +90,92 @@ import Footer from "@/components/footer"
         </div>
          
         <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden">
-  <div className="absolute inset-0 flex items-center justify-center">
-    <div className="text-center">
-      {/* تعديل حجم الصورة لتكون أصغر قليلاً ومتجاوبة */}
-      <div className="w-full max-w-5xl mx-auto mb-6 relative px-3">
-  <div
-    className="
-      w-full
-      h-[120px]     /* موبايلات صغيرة جدًا */
-      sm:h-[180px]  /* موبايلات متوسطة */
-      md:h-[260px]  /* تابلت */
-      lg:h-[340px]  /* لابتوب */
-      xl:h-[420px]  /* ديسكتوب كبير */
-      rounded-2xl
-      overflow-hidden
-    "
-  >
-    <img
-      src="/images/all.jpeg"
-      alt="All Supplement"
-      className="
-        w-full
-        h-full
-        object-cover
-        rounded-2xl
-        drop-shadow-2xl
-        transition-all
-        duration-500
-        ease-in-out
-        hover:scale-[1.02]
-      "
-    />
-  </div>
-</div>
+          {/* المحتوى الرئيسي */}
+          <div className="flex flex-col items-center justify-center px-4 py-10 sm:py-14 space-y-6">
 
+            {/* الصورة */}
+            <div className="w-full max-w-3xl md:max-w-4xl rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/images/all.jpeg"
+                alt="All Supplement"
+                className="
+                  w-full
+                  h-[160px]        /* موبايل صغير */
+                  sm:h-[220px]     /* موبايل متوسط */
+                  md:h-[300px]     /* تابلت */
+                  lg:h-[380px]     /* لابتوب */
+                  xl:h-[440px]     /* ديسكتوب */
+                  object-cover
+                  rounded-2xl
+                  drop-shadow-2xl
+                  transition-transform
+                  duration-500
+                  ease-in-out
+                  hover:scale-[1.03]
+                "
+              />
+            </div>
 
+            {/* صندوق Nutrition Facts */}
+            <div
+              className="
+                bg-white/20
+                rounded-xl
+                p-5 sm:p-6
+                w-full
+                max-w-md
+                text-white
+                backdrop-blur-md
+                border border-white/20
+                shadow-lg
+                text-center
+              "
+            >
+              <h3 className="font-semibold mb-4 text-base uppercase tracking-wider">
+                Nutrition Facts
+              </h3>
 
-      {/* صندوق Nutrition Facts */}
-     <div
-      className="
-        bg-white/20
-        rounded-xl
-        p-5
-        sm:p-6
-        mx-auto
-        w-[90%]
-        sm:w-[80%]
-        max-w-md
-        backdrop-blur-md
-        shadow-lg
-        border border-white/20
-      "
-    >
-      <h3 className="text-white font-semibold mb-4 text-base uppercase tracking-wider text-center">
-        Nutrition Facts
-      </h3>
+              <div className="space-y-3 text-sm sm:text-base">
+                <div className="flex justify-between items-center border-b border-white/30 pb-2">
+                  <span className="opacity-90">Calories</span>
+                  <span className="font-bold text-lg sm:text-xl">130</span>
+                </div>
+                <div className="flex justify-between items-center border-b border-white/30 pb-2">
+                  <span className="opacity-90">Proteins</span>
+                  <span className="font-bold text-lg sm:text-xl text-yellow-300">24g</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="opacity-90">Trans Fat</span>
+                  <span className="font-bold text-lg sm:text-xl">0g</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <div className="text-white space-y-3 text-sm sm:text-base">
-        <div className="flex justify-between items-center border-b border-white/30 pb-2">
-          <span className="opacity-90">Calories</span>
-          <span className="font-bold text-lg sm:text-xl">130</span>
+          {/* أيقونات التواصل الاجتماعي (تظهر على الديسكتوب فقط) */}
+          <div className="hidden lg:flex flex-col gap-4 absolute right-6 top-1/2 -translate-y-1/2">
+            <div
+              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shadow-md hover:bg-white/30 transition-all duration-300"
+              style={{ backdropFilter: 'blur(6px)' }}
+            >
+              <Facebook className="w-5 h-5 text-white" />
+            </div>
+            <div
+              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shadow-md hover:bg-white/30 transition-all duration-300"
+              style={{ backdropFilter: 'blur(6px)' }}
+            >
+              <Instagram className="w-5 h-5 text-white" />
+            </div>
+            <div
+              className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shadow-md hover:bg-white/30 transition-all duration-300"
+              style={{ backdropFilter: 'blur(6px)' }}
+            >
+              <MessageCircle className="w-5 h-5 text-white" />
+            </div>
+          </div>
         </div>
-        <div className="flex justify-between items-center border-b border-white/30 pb-2">
-          <span className="opacity-90">Proteins</span>
-          <span className="font-bold text-lg sm:text-xl text-yellow-300">24g</span>
         </div>
-        <div className="flex justify-between items-center">
-          <span className="opacity-90">Trans Fat</span>
-          <span className="font-bold text-lg sm:text-xl">0g</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  {/* أيقونات التواصل الاجتماعي */}
-  <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex-col gap-4 hidden lg:flex">
 
-    <div
-      className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-      style={{ backdropFilter: 'blur(4px)' }}
-    >
-      <Facebook className="w-5 h-5 text-white" />
-    </div>
-    <div
-      className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-      style={{ backdropFilter: 'blur(4px)' }}
-    >
-      <Instagram className="w-5 h-5 text-white" />
-    </div>
-    <div
-      className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-      style={{ backdropFilter: 'blur(4px)' }}
-    >
-      <MessageCircle className="w-5 h-5 text-white" />
-    </div>
-  </div>
-</div>
-</div>
-    
 
 
   <section className="py-12 bg-gray-50">

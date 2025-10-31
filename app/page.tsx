@@ -127,31 +127,42 @@ import Footer from "@/components/footer"
 
 
       {/* صندوق Nutrition Facts */}
-      <div
-        className="bg-white/10 rounded-lg p-4 mx-4 sm:mx-6 md:mx-8"
-        style={{ backdropFilter: 'blur(4px)' }}
-      >
-        <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">
-          Nutrition Facts
-        </h3>
-        <div className="text-white space-y-3">
-          <div className="flex justify-between items-center border-b border-white/20 pb-2">
-            <span className="text-sm opacity-90">Calories</span>
-            <span className="font-bold text-lg">130</span>
-          </div>
-          <div className="flex justify-between items-center border-b border-white/20 pb-2">
-            <span className="text-sm opacity-90">Proteins</span>
-            <span className="font-bold text-lg text-yellow-300">24g</span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-sm opacity-90">Trans Fat</span>
-            <span className="font-bold text-lg">0g</span>
-          </div>
+     <div
+      className="
+        bg-white/20
+        rounded-xl
+        p-5
+        sm:p-6
+        mx-auto
+        w-[90%]
+        sm:w-[80%]
+        max-w-md
+        backdrop-blur-md
+        shadow-lg
+        border border-white/20
+      "
+    >
+      <h3 className="text-white font-semibold mb-4 text-base uppercase tracking-wider text-center">
+        Nutrition Facts
+      </h3>
+
+      <div className="text-white space-y-3 text-sm sm:text-base">
+        <div className="flex justify-between items-center border-b border-white/30 pb-2">
+          <span className="opacity-90">Calories</span>
+          <span className="font-bold text-lg sm:text-xl">130</span>
+        </div>
+        <div className="flex justify-between items-center border-b border-white/30 pb-2">
+          <span className="opacity-90">Proteins</span>
+          <span className="font-bold text-lg sm:text-xl text-yellow-300">24g</span>
+        </div>
+        <div className="flex justify-between items-center">
+          <span className="opacity-90">Trans Fat</span>
+          <span className="font-bold text-lg sm:text-xl">0g</span>
         </div>
       </div>
     </div>
   </div>
-
+</div>
   {/* أيقونات التواصل الاجتماعي */}
   <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex-col gap-4 hidden lg:flex">
 

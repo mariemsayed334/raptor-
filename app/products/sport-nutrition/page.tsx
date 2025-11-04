@@ -50,7 +50,7 @@ export default function sportNutrition() {
   <span className="text-gray-700 font-semibold"> Sport Nutrition</span>
 </div>
     {/* عنوان القسم */}
-    <h1 className="text-4xl font-mono text-black-600 mb-30 mt-8 ml-5">
+    <h1 className="text-4xl font-mono text-black-600 mb-30 mt-8 ml-50">
   Sport Nutrition
 </h1>
 

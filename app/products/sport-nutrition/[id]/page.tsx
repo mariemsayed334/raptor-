@@ -207,9 +207,9 @@ export default function ProductPage() {
           {/* طرق الدفع */}
           <div className="flex justify-center items-center gap-4 pt-2">
             <span className="text-gray-600 font-medium">Payment Methods:</span>
-            <img src="/visa.jpeg" alt="Visa" className="h-10" />
-            <img src="/mastercard.jpeg" alt="MasterCard" className="h-20" />
-            <img src="/paypal.jpeg" alt="PayPal" className="h-10" />
+            <img src="/visa.jpeg" alt="Visa" className="h-16" />
+            <img src="/mastercard.jpeg" alt="MasterCard" className="h-17" />
+            <img src="/paypal.jpeg" alt="PayPal" className="h-22" />
           </div>
         </div>
 

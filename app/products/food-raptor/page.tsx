@@ -93,7 +93,7 @@ export default function ProductsPage() {
   <span className="text-gray-700 font-semibold"> Food Raptor</span>
 </div>
     {/* عنوان القسم */}
-    <h1 className="text-8xl font-mono text-black-600 mb-30 mt-8 ml-50">
+    <h1 className="text-4xl font-mono text-black-600 mb-30 mt-8 ml-50">
            Food Raptor
         </h1>
         <div className="max-w-7xl mx-auto px-6">

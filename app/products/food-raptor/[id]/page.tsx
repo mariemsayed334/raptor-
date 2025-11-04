@@ -325,7 +325,7 @@ export default function ProductPage() {
           <div className="flex justify-center items-center gap-4 pt-2">
             <span className="text-gray-600 font-medium">Payment Methods:</span>
             <img src="/visa.jpeg" alt="Visa" className="h-16" />
-            <img src="/mastercard.jpeg" alt="MasterCard" className="h-17" />
+            <img src="/Mastercard.jpeg" alt="MasterCard" className="h-17" />
             <img src="/paypal.jpeg" alt="PayPal" className="h-22" />
           </div>
         </div>

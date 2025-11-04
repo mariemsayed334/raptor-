@@ -16,7 +16,7 @@ export default function sportNutrition() {
   const sportNutrition = [
     { id: 1, name: "Amino+EAA", image: "/amino-eaa.jpg", },
     { id: 2, name: "IGNITER", image: "/igniter.jpg", },
-    { id: 3, name: " ARGININE+CITROLINE", image: "/arginine + citroline.jpg",  },
+    { id: 3, name: " ARGININE+CITROLINE", image: "/arginine-citroline.jpg",  },
     { id: 4, name: "COLLAGEN+MULTIVITAMIN", image: "/collagen.jpg",  },
     { id: 5, name: "CREATIAN MIX", image: "/creatine.jpg", },
     { id: 6, name: " CREATINE+TEST", image: "/cretine+test.jpg",  },

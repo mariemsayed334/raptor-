@@ -40,7 +40,7 @@ const sportNutrition = [
   {
     id: 3,
     name: "ARGININE+CITROLINE",
-    image: "/arginine + citroline.jpg",
+    image: "/arginine-citroline.jpg",
     reviews: 112,
     fullDescription:
     "A 100% Premium blend designed for Pre-During-Post-Workout support. It provides 2500 mg of Citrulline and 2500 mg of Arginine per serving, along with a full B-Vitamin complex.",
@@ -208,7 +208,7 @@ export default function ProductPage() {
           <div className="flex justify-center items-center gap-4 pt-2">
             <span className="text-gray-600 font-medium">Payment Methods:</span>
             <img src="/visa.jpeg" alt="Visa" className="h-16" />
-            <img src="/mastercard.jpeg" alt="MasterCard" className="h-17" />
+            <img src="/Mastercard.jpeg" alt="MasterCard" className="h-17" />
             <img src="/paypal.jpeg" alt="PayPal" className="h-22" />
           </div>
         </div>

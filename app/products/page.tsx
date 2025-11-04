@@ -1,90 +1,78 @@
 "use client"
 import { useState } from "react"
-import { Search, Filter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Header from "@/components/header"
-import { useCart } from "@/contexts/cart-context"
+import Link from "next/link"
+import { Apple, Dumbbell } from "lucide-react"
+
+import { Heart, Award } from "lucide-react"
 import Footer from "@/components/footer"
 import { useRouter } from "next/navigation"
 
 export default function ProductsPage() {
   const router = useRouter()
 
+  
+
   const products = [
-    { id: 1, name: " D3+K2", image: "/raptor-d3-k2.jpg", category: "Vitamins" },
-    { id: 2, name: " Calcium", image: "/raptor-calcium.jpg", category: "Minerals" },
-    { id: 3, name: " Follic Acid", image: "/raptor-follic-acid.jpg", category: "Vitamins" },
-    { id: 4, name: "Magnesium", image: "/raptor-magnesium.jpg", category: "Minerals" },
-    { id: 5, name: " Omega 3", image: "/raptor-omega3.jpg", category: "Health" },
-    { id: 6, name: " Multivitamin", image: "/raptor-multivitamin.jpg", category: "Vitamins" },
-    { id: 7, name: " Sleep", image: "/raptor-sleep.jpg", category: "Wellness" },
-    { id: 8, name: " V-Iron", image: "/raptor-v-iron.jpg", category: "Minerals" },
-    { id: 9, name: " Vitamin C", image: "/raptor-vitamin-c.jpg", category: "Vitamins" },
+    { id: 1, name: "D3+K2", image: "/raptor-d3-k2.jpg" },
+    { id: 2, name: "Calcium", image: "/raptor-calcium.jpg" },
+    { id: 3, name: "Follic Acid", image: "/raptor-follic-acid.jpg" },
+    { id: 4, name: "Magnesium", image: "/raptor-magnesium.jpg" },
+    { id: 5, name: "Omega 3", image: "/raptor-omega3.jpg" },
+    { id: 6, name: "Multivitamin", image: "/raptor-multivitamin.jpg" },
+    { id: 7, name: "Sleep", image: "/raptor-sleep.jpg" },
+    { id: 8, name: "V-Iron", image: "/raptor-v-iron.jpg" },
+    { id: 9, name: "Vitamin C", image: "/raptor-vitamin-c.jpg" },
   ]
 
-  const categories = ["All", "Vitamins", "Minerals", "Health", "Wellness"]
-
-  const [selectedCategory, setSelectedCategory] = useState("All")
-  const [searchTerm, setSearchTerm] = useState("")
-
-  const filteredProducts = products.filter((p) => {
-    const matchCategory =
-      selectedCategory === "All" || p.category === selectedCategory
-    const matchSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchCategory && matchSearch
-  })
-
   const handleProductClick = (productId: number) => {
-  router.push(`/products/${productId}`)
-}
+    router.push(`/products/${productId}`)
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
 
-      {/* Filter and Search */}
-      <section className="py-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Filter className="w-5 h-5 text-gray-600" />
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <Button
-                    key={category}
-                    variant={selectedCategory === category ? "default" : "outline"}
-                    className={
-                      selectedCategory === category
-                        ? "bg-green-600 hover:bg-green-700 text-white"
-                        : "text-gray-700 border-gray-300 hover:border-green-500"
-                    }
-                    onClick={() => setSelectedCategory(category)}
-                  >
-                    {category}
-                  </Button>
-                ))}
-              </div>
+      <section className="py-20 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+<div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-30 mt-8">          {/* Food Supplement */}
+          <Link
+            href="/products/food-raptor"
+            className="group flex flex-col items-center cursor-pointer"
+          >
+            <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-5">
+              <Apple className="w-10 h-10 text-green-600" />
             </div>
+            <h3 className="text-xl font-semibold text-green-600 group-hover:text-green-700 transition">
+              Food Raptor{" "}
+              <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </h3>
+          </Link>
 
-            <div className="relative">
-              <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent w-64"
-              />
+          {/* Sport Nutrition */}
+          <Link
+            href="/products/sport-nutrition"
+            className="group flex flex-col items-center cursor-pointer"
+          >
+            <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-5">
+              <Dumbbell className="w-10 h-10 text-green-600" />
             </div>
-          </div>
+            <h3 className="text-xl font-semibold text-green-600 group-hover:text-green-700 transition">
+              Sport Nutrition{" "}
+              <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+            </h3>
+          </Link>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Products */}
+      {/* Products Section */}
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => (
+            {products.map((product) => (
               <Card
                 key={product.id}
                 className="border-0 shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer rounded-2xl"
@@ -93,7 +81,7 @@ export default function ProductsPage() {
                 <CardContent className="p-0">
                   <div className="relative overflow-hidden rounded-t-2xl bg-gray-100 h-72 flex items-center justify-center">
                     <img
-                      src={product.image || "/placeholder.svg"}
+                      src={product.image}
                       alt={product.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -103,28 +91,19 @@ export default function ProductsPage() {
                     <h3 className="text-lg font-semibold mb-3 group-hover:text-green-600 transition-colors text-center">
                       {product.name}
                     </h3>
-
-                    <div className="text-center">
-                      <span className="inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">
-                        {product.category}
-                      </span>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          {filteredProducts.length === 0 && (
+          {products.length === 0 && (
             <p className="text-center text-gray-500 text-lg mt-10">
-              No products found matching your search.
+              No products found.
             </p>
           )}
         </div>
       </section>
-
-      {/* Bottom Green Section */}
-    
 
       <Footer />
     </div>

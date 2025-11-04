@@ -18,6 +18,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
  import Link from "next/link"
+ import { Apple, Dumbbell } from "lucide-react"
  import CountUp from "react-countup";
  import React, { useState } from "react";
 
@@ -91,54 +92,55 @@ import Footer from "@/components/footer"
          
        <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden min-h-screen flex flex-col items-center justify-center px-4 py-8">
   {/* الصورة */}
-  <div className="w-full max-w-3xl mb-6">
+    <div className="w-full max-w-4xl mb-10 relative">
     <img
       src="/images/all.jpeg"
       alt="All Supplement"
-      className="
-        w-full
-        h-[160px]        /* موبايلات صغيرة */
-        sm:h-[220px]     /* موبايلات متوسطة */
-        md:h-[280px]     /* تابلت */
-        lg:h-[360px]     /* لابتوب */
-        object-cover
-        rounded-2xl
-        drop-shadow-2xl
-      "
+      className="w-full h-[180px] sm:h-[250px] md:h-[320px] lg:h-[420px] object-cover rounded-3xl shadow-2xl border border-white/10"
     />
+    {/* ظل خفيف فوق الصورة */}
+    <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>
   </div>
 
   {/* صندوق Nutrition Facts */}
   <div
     className="
-      bg-white/20
-      rounded-xl
-      p-5
-      sm:p-6
-      w-full
+      bg-white/15
+      backdrop-blur-xl
+      border border-white/25
+      rounded-2xl
+      p-6
+      sm:p-8
       max-w-md
-      backdrop-blur-md
-      shadow-lg
-      border border-white/20
+      w-full
       text-center
+      shadow-2xl
+      hover:scale-105
+      transition-all
+      duration-300
+      ease-in-out
     "
   >
-    <h3 className="text-white font-semibold mb-4 text-base uppercase tracking-wider">
+    <h3 className="text-white font-bold mb-5 text-lg sm:text-xl uppercase tracking-widest">
       Nutrition Facts
     </h3>
 
-    <div className="text-white space-y-3 text-sm sm:text-base">
-      <div className="flex justify-between items-center border-b border-white/30 pb-2">
+    <div className="text-white space-y-4 text-sm sm:text-base">
+      <div className="flex justify-between items-center border-b border-white/25 pb-2">
         <span className="opacity-90">Calories</span>
-        <span className="font-bold text-lg sm:text-xl">130</span>
+        <span className="font-bold text-xl sm:text-2xl text-yellow-200">130</span>
       </div>
-      <div className="flex justify-between items-center border-b border-white/30 pb-2">
+      <div className="flex justify-between items-center border-b border-white/25 pb-2">
         <span className="opacity-90">Proteins</span>
-        <span className="font-bold text-lg sm:text-xl text-yellow-300">24g</span>
+        <span className="font-bold text-xl sm:text-2xl text-green-300">24g</span>
+      </div>
+      <div className="flex justify-between items-center border-b border-white/25 pb-2">
+        <span className="opacity-90">Carbohydrates</span>
+        <span className="font-bold text-xl sm:text-2xl text-blue-300">2g</span>
       </div>
       <div className="flex justify-between items-center">
         <span className="opacity-90">Trans Fat</span>
-        <span className="font-bold text-lg sm:text-xl">0g</span>
+        <span className="font-bold text-xl sm:text-2xl text-red-300">0g</span>
       </div>
     </div>
   </div>
@@ -270,51 +272,47 @@ import Footer from "@/components/footer"
         </div>
       </section>
 
-      {/* Product Categories Section */}
-     <section className="py-20 bg-gray-50">
+   {/* Product Categories Section */}
+<section className="py-20 bg-gray-50">
   <div className="max-w-7xl mx-auto px-6">
     <div className="text-center mb-16">
       <p className="text-green-600 font-semibold mb-2">Product</p>
       <h2 className="text-4xl font-bold text-gray-900">Category</h2>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* كارت 1 */}
-      <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-        <CardContent className="pt-6">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Heart className="w-8 h-8 text-green-600" />
-          </div>
-          <Link href="/products">
-            <h3 className="text-xl font-semibold cursor-pointer hover:text-green-600 transition">
-              Food Raptor
-            </h3>
-          </Link>
-        </CardContent>
-      </Card>
+    <div className="flex flex-wrap justify-center gap-8">
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-12 sm:gap-24 mt-8">
+  {/* Food Supplement */}
+  <Link
+    href="/products/food-raptor"
+    className="group flex flex-col items-center cursor-pointer"
+  >
+    <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-5">
+      <Apple className="w-10 h-10 text-green-600" />
+    </div>
+    <h3 className="text-xl font-semibold text-black-600 group-hover:text-green-700 transition">
+      Food Supplement
+    </h3>
+  </Link>
 
-      {/* كارت 2 */}
-      <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-        <CardContent className="pt-6">
-          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Award className="w-8 h-8 text-blue-600" />
-          </div>
-          <h3 className="text-xl font-semibold">Sport Nutrition</h3>
-        </CardContent>
-      </Card>
+  {/* Sport Nutrition */}
+  <Link
+    href="/products/sport-nutrition"
+    className="group flex flex-col items-center cursor-pointer"
+  >
+    <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-5">
+      <Dumbbell className="w-10 h-10 text-green-600" />
+    </div>
+    <h3 className="text-xl font-semibold text-black-600 group-hover:text-green-700 transition">
+      Sport Nutrition
+    </h3>
+  </Link>
+</div>
 
-      {/* كارت 3 */}
-      <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-shadow">
-        <CardContent className="pt-6">
-          <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Star className="w-8 h-8 text-pink-600" />
-          </div>
-          <h3 className="text-xl font-semibold">Cosmetics</h3>
-        </CardContent>
-      </Card>
     </div>
   </div>
 </section>
+
 
 
       <section className="py-20 bg-gray-50">

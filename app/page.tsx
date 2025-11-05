@@ -91,6 +91,8 @@ import Footer from "@/components/footer"
         </div>
          
        <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden min-h-screen flex flex-col items-center justify-center px-4 py-8">
+        {/* اعملي Wrapper هنا */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full"></div>
   {/* الصورة */}
     <div className="w-full max-w-4xl mb-10 relative">
     <img

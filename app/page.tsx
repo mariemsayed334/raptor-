@@ -62,71 +62,56 @@ import Footer from "@/components/footer"
       <Header />
 
       {/* Hero Section */}
-      <div className="flex min-h-[calc(100vh-80px)]">
-        <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20">
-          <div className="max-w-lg">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              FUEL YOUR PERFORMANCE
-              <br />
-              <span className="text-green-600">WITH PREMIUM NUTRITION</span>
-            </h1>
+<div className="bg-gradient-to-br from-green-500 to-green-700 min-h-screen w-full overflow-x-hidden px-6 md:px-12 py-12 flex flex-col md:flex-row items-center justify-center gap-12">
 
-            <div className="space-y-2 mb-6">
-              <h2 className="text-2xl font-bold text-gray-800">Fast Energy. Zero Sugar Maximum Performance</h2>
-            </div>
+  {/* Left Text Content */}
+  <div className="w-full md:w-1/2 text-center md:text-left">
+    <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+      FUEL YOUR PERFORMANCE
+      <br />
+      <span className="text-yellow-300">WITH PREMIUM NUTRITION</span>
+    </h1>
 
-        
+    <h2 className="text-xl md:text-2xl font-semibold text-white mb-4">
+      Fast Energy. Zero Sugar. Maximum Performance.
+    </h2>
 
-            
-            <p className="text-gray-600 mb-8">
-              We combine the best of science and nature to bring you nutritional meals for maximum performance.
-            </p>
+    <p className="text-white/90 mb-8 max-w-md">
+      We combine science and nature to create nutritional products designed for your best performance.
+    </p>
 
-                 <Link href="/products">
-                 <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-lg">
-                  Shop Now
-                 </Button>
-                  </Link>
-          </div>
-        </div>
-         
-      
-<div className="bg-gradient-to-br from-green-500 to-green-700 min-h-screen w-full overflow-x-hidden px-4 py-10">
+    <Link href="/products">
+      <Button className="bg-white text-green-700 hover:bg-gray-100 transition font-semibold px-8 py-3 rounded-full text-lg">
+        Shop Now
+      </Button>
+    </Link>
+  </div>
 
-  <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 mt-10 w-full text-center">
+  {/* Right Image + Nutrition Box */}
+  <div className="w-full md:w-1/2 flex flex-col items-center gap-6">
 
-    {/* الصورة */}
-    <div className="w-full lg:w-1/2 flex justify-center">
-      <img
-        src="/images/all.jpeg"
-        alt="Supplement Hero"
-        className="w-[280px] sm:w-[350px] md:w-[420px] rounded-2xl shadow-2xl object-cover"
-      />
-    </div>
+    {/* Image */}
+    <img
+      src="/images/all.jpeg"
+      alt="Hero Product"
+      className="w-[260px] sm:w-[340px] md:w-[420px] rounded-2xl shadow-2xl object-cover"
+    />
 
     {/* Nutrition Box */}
-    <div className="
-      w-full lg:w-1/2
-      bg-white/15 backdrop-blur-xl
-      border border-white/25
-      rounded-2xl p-6
-      shadow-2xl text-center
-    ">
-      <h3 className="text-white font-bold mb-5 text-lg uppercase tracking-widest">
-        Nutrition Facts
-      </h3>
+    <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-2xl p-6 w-full max-w-sm text-center shadow-2xl">
+      <h3 className="text-white font-bold mb-4 text-lg uppercase tracking-widest">Nutrition Facts</h3>
 
-      <div className="text-white space-y-4 text-sm sm:text-base">
-        <div className="flex justify-between border-b border-white/25 pb-2">
+      <div className="text-white space-y-3 text-sm sm:text-base">
+        <div className="flex justify-between border-b border-white/20 pb-2">
           <span className="opacity-90">Calories</span>
           <span className="font-bold text-yellow-200">130</span>
         </div>
-        <div className="flex justify-between border-b border-white/25 pb-2">
+        <div className="flex justify-between border-b border-white/20 pb-2">
           <span className="opacity-90">Proteins</span>
           <span className="font-bold text-green-300">24g</span>
         </div>
-        <div className="flex justify-between border-b border-white/25 pb-2">
-          <span className="opacity-90">Carbohydrates</span>
+        <div className="flex justify-between border-b border-white/20 pb-2">
+          <span className="opacity-90">Carbs</span>
           <span className="font-bold text-blue-300">2g</span>
         </div>
         <div className="flex justify-between">
@@ -139,11 +124,7 @@ import Footer from "@/components/footer"
   </div>
 </div>
 
-
-  
-
-
-  {/* أيقونات التواصل الاجتماعي */}
+{/* Social Icons (visible only on large screens) */}
 <div className="hidden lg:flex flex-col gap-3 fixed right-6 top-1/3 z-50">
   <a href="https://wa.me/201234567890" target="_blank" className="bg-green-500 p-3 rounded-full shadow-lg">
     <img src="/whatsapp (1).png" alt="WhatsApp" className="w-6 h-6" />
@@ -155,7 +136,7 @@ import Footer from "@/components/footer"
     <img src="/communication.png" alt="Phone" className="w-6 h-6" />
   </a>
 </div>
-      </div>
+
 
 
 

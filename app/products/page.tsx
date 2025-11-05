@@ -32,6 +32,7 @@ export default function ProductsPage() {
 
   const handleProductClick = (productId: number) => {
     router.push(`/products/${productId}`)
+    
   }
 
   return (

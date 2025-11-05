@@ -39,7 +39,7 @@ export default function ProductsPage() {
   })
 
  const handleProductClick = (productId: number) => {
-  router.push(`/food-raptor/${productId}`)
+    router.push(`/products/${productId}`)
 }
 
   return (

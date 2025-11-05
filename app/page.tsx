@@ -90,48 +90,55 @@ import Footer from "@/components/footer"
           </div>
         </div>
          
-      <div className="w-full bg-gradient-to-br from-green-500 to-green-700 px-6 py-14">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+      
+<div className="bg-gradient-to-br from-green-500 to-green-700 min-h-screen w-full overflow-x-hidden px-4 py-10 flex items-center">
 
-    {/* النص + Nutrition Box */}
-    <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
-
-
-      {/* Nutrition Card */}
-      <div className="bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl p-6 w-full max-w-sm shadow-2xl">
-        <h3 className="text-white text-lg font-semibold tracking-wider mb-4 text-center">
-          Nutrition Facts
-        </h3>
-
-        <div className="text-white space-y-3 text-sm sm:text-base">
-          <div className="flex justify-between border-b border-white/20 pb-2">
-            <span>Calories</span><span className="font-bold text-yellow-200">130</span>
-          </div>
-          <div className="flex justify-between border-b border-white/20 pb-2">
-            <span>Proteins</span><span className="font-bold text-green-300">24g</span>
-          </div>
-          <div className="flex justify-between border-b border-white/20 pb-2">
-            <span>Carbs</span><span className="font-bold text-blue-300">2g</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Trans Fat</span><span className="font-bold text-red-300">0g</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
+  <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-10 mt-10">
     {/* الصورة */}
-    <div className="flex justify-center">
+    <div className="w-full lg:w-1/2 flex justify-center">
       <img
         src="/images/all.jpeg"
-        alt="Supplements"
-        className="w-[320px] sm:w-[380px] md:w-[460px] rounded-3xl shadow-[0_8px_35px_rgba(0,0,0,0.35)] object-cover"
+        alt="Supplement Hero"
+        className="w-[280px] sm:w-[350px] md:w-[420px] rounded-2xl shadow-2xl object-cover"
       />
     </div>
 
+    {/* Nutrition Box */}
+    <div className="
+      w-full lg:w-1/2
+      bg-white/15 backdrop-blur-xl
+      border border-white/25
+      rounded-2xl p-6
+      shadow-2xl text-center
+    ">
+      <h3 className="text-white font-bold mb-5 text-lg uppercase tracking-widest">
+        Nutrition Facts
+      </h3>
+
+      <div className="text-white space-y-4 text-sm sm:text-base">
+        <div className="flex justify-between border-b border-white/25 pb-2">
+          <span className="opacity-90">Calories</span>
+          <span className="font-bold text-yellow-200">130</span>
+        </div>
+        <div className="flex justify-between border-b border-white/25 pb-2">
+          <span className="opacity-90">Proteins</span>
+          <span className="font-bold text-green-300">24g</span>
+        </div>
+        <div className="flex justify-between border-b border-white/25 pb-2">
+          <span className="opacity-90">Carbohydrates</span>
+          <span className="font-bold text-blue-300">2g</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="opacity-90">Trans Fat</span>
+          <span className="font-bold text-red-300">0g</span>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+  </div>
+
+  
+
 
   {/* أيقونات التواصل الاجتماعي */}
 <div className="hidden lg:flex flex-col gap-3 fixed right-6 top-1/3 z-50">

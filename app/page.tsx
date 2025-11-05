@@ -107,18 +107,17 @@ import Footer from "@/components/footer"
     className="
       bg-white/15
       backdrop-blur-xl
-      border border-white/25
+      border border-white/20
       rounded-2xl
-      p-6
-      sm:p-8
-      max-w-md
+      p-5
+      sm:p-7
       w-full
+      max-w-sm     /* ده اللي ظبطه على الموبايل */
       text-center
       shadow-2xl
-      hover:scale-105
-      transition-all
+      transition-transform
       duration-300
-      ease-in-out
+      hover:scale-[1.03]
     "
   >
     <h3 className="text-white font-bold mb-5 text-lg sm:text-xl uppercase tracking-widest">

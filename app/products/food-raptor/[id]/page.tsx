@@ -7,6 +7,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { Heart } from "lucide-react"
 
+
 const products = [
   {
     id: 1,

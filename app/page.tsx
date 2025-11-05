@@ -90,76 +90,66 @@ import Footer from "@/components/footer"
           </div>
         </div>
          
-       <div className="flex-1 bg-gradient-to-br from-green-500 to-green-700 relative overflow-hidden min-h-screen flex flex-col items-center justify-center px-4 py-8">
-        {/* اعملي Wrapper هنا */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full"></div>
-  {/* الصورة */}
-    <div className="w-full max-w-4xl mb-10 relative">
-    <img
-      src="/images/all.jpeg"
-      alt="All Supplement"
-      className="w-full h-[180px] sm:h-[250px] md:h-[320px] lg:h-[420px] object-cover rounded-3xl shadow-2xl border border-white/10"
-    />
-    {/* ظل خفيف فوق الصورة */}
-    <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>
-  </div>
+      <div className="w-full bg-gradient-to-br from-green-500 to-green-700 px-6 py-14">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-  {/* صندوق Nutrition Facts */}
-  <div
-    className="
-      bg-white/15
-      backdrop-blur-xl
-      border border-white/20
-      rounded-2xl
-      p-5
-      sm:p-7
-      w-full
-      max-w-sm     /* ده اللي ظبطه على الموبايل */
-      text-center
-      shadow-2xl
-      transition-transform
-      duration-300
-      hover:scale-[1.03]
-    "
-  >
-    <h3 className="text-white font-bold mb-5 text-lg sm:text-xl uppercase tracking-widest">
-      Nutrition Facts
-    </h3>
+    {/* النص + Nutrition Box */}
+    <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
 
-    <div className="text-white space-y-4 text-sm sm:text-base">
-      <div className="flex justify-between items-center border-b border-white/25 pb-2">
-        <span className="opacity-90">Calories</span>
-        <span className="font-bold text-xl sm:text-2xl text-yellow-200">130</span>
-      </div>
-      <div className="flex justify-between items-center border-b border-white/25 pb-2">
-        <span className="opacity-90">Proteins</span>
-        <span className="font-bold text-xl sm:text-2xl text-green-300">24g</span>
-      </div>
-      <div className="flex justify-between items-center border-b border-white/25 pb-2">
-        <span className="opacity-90">Carbohydrates</span>
-        <span className="font-bold text-xl sm:text-2xl text-blue-300">2g</span>
-      </div>
-      <div className="flex justify-between items-center">
-        <span className="opacity-90">Trans Fat</span>
-        <span className="font-bold text-xl sm:text-2xl text-red-300">0g</span>
-      </div>
-    </div>
-  </div>
 
-  {/* أيقونات التواصل الاجتماعي */}
-  <div className="flex justify-center gap-4 mt-6 lg:mt-10">
-    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-      <Facebook className="w-5 h-5 text-white" />
-    </div>
-    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-      <Instagram className="w-5 h-5 text-white" />
-    </div>
-    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-      <MessageCircle className="w-5 h-5 text-white" />
-    </div>
-  </div>
+      {/* Nutrition Card */}
+      <div className="bg-white/20 backdrop-blur-lg border border-white/30 rounded-xl p-6 w-full max-w-sm shadow-2xl">
+        <h3 className="text-white text-lg font-semibold tracking-wider mb-4 text-center">
+          Nutrition Facts
+        </h3>
+
+        <div className="text-white space-y-3 text-sm sm:text-base">
+          <div className="flex justify-between border-b border-white/20 pb-2">
+            <span>Calories</span><span className="font-bold text-yellow-200">130</span>
+          </div>
+          <div className="flex justify-between border-b border-white/20 pb-2">
+            <span>Proteins</span><span className="font-bold text-green-300">24g</span>
+          </div>
+          <div className="flex justify-between border-b border-white/20 pb-2">
+            <span>Carbs</span><span className="font-bold text-blue-300">2g</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Trans Fat</span><span className="font-bold text-red-300">0g</span>
+          </div>
         </div>
       </div>
+
+    </div>
+
+    {/* الصورة */}
+    <div className="flex justify-center">
+      <img
+        src="/images/all.jpeg"
+        alt="Supplements"
+        className="w-[320px] sm:w-[380px] md:w-[460px] rounded-3xl shadow-[0_8px_35px_rgba(0,0,0,0.35)] object-cover"
+      />
+    </div>
+
+  </div>
+</div>
+
+  {/* أيقونات التواصل الاجتماعي */}
+<div className="hidden lg:flex flex-col gap-3 fixed right-6 top-1/3 z-50">
+  <a href="https://wa.me/201234567890" target="_blank" className="bg-green-500 p-3 rounded-full shadow-lg">
+    <img src="/whatsapp (1).png" alt="WhatsApp" className="w-6 h-6" />
+  </a>
+  <a href="https://instagram.com/yourpage" target="_blank" className="bg-pink-500 p-3 rounded-full shadow-lg">
+    <img src="/instagram.png" alt="Instagram" className="w-6 h-6" />
+  </a>
+  <a href="tel:+201234567890" className="bg-blue-500 p-3 rounded-full shadow-lg">
+    <img src="/communication.png" alt="Phone" className="w-6 h-6" />
+  </a>
+</div>
+      </div>
+
+
+
+     
 
 
 

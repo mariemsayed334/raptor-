@@ -91,9 +91,10 @@ import Footer from "@/components/footer"
         </div>
          
       
-<div className="bg-gradient-to-br from-green-500 to-green-700 min-h-screen w-full overflow-x-hidden px-4 py-10 flex items-center">
+<div className="bg-gradient-to-br from-green-500 to-green-700 min-h-screen w-full overflow-x-hidden px-4 py-10">
 
-  <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-10 mt-10">
+  <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 mt-10 w-full text-center">
+
     {/* الصورة */}
     <div className="w-full lg:w-1/2 flex justify-center">
       <img
@@ -134,8 +135,10 @@ import Footer from "@/components/footer"
         </div>
       </div>
     </div>
+
   </div>
-  </div>
+</div>
+
 
   
 

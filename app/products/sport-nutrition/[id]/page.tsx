@@ -147,7 +147,43 @@ const sportNutrition = [
     howToUse: "Mix one scoop with 250ml of cold water or milk after training.",
     warning: "Not for individuals with lactose intolerance. Keep out of reach of children.",
     storage: "Store in a cool, dry place away from sunlight."
-  }
+  },
+
+  
+
+  {
+    id: 11,
+    name: "WHEY",
+    image: "/whey.jpg",
+    fullDescription:
+           " A 100% Premium Pre-Training Energy & Drink with 400 mg of Caffeine and a performance blend including Beta-Alanine, Arginine AKG, Citrulline Malate, and Taurine. It is designed for Extreme Workouts and Superior Results." ,
+   Benefits: [
+      "Helps to increase muscle mass and support rapid recovery after workouts. ",
+      "Provides the body with the necessary amino acids to repair muscle fibers and support overall health and well-being." 
+    ],
+    howToUse: "Mix one scoop with 250ml of cold water or milk after training.",
+    warning: "Not for individuals with lactose intolerance. Keep out of reach of children.",
+    storage: "Store in a cool, dry place away from sunlight."
+  },
+
+  {
+    id: 12,
+    name: "L-CRNITINE",
+    image: "/Untitled-1.jpg",
+    fullDescription: 
+         "A 100% Premium Energy Burn Formula providing 3000mg of L-Carnitine per serving This blend is enhanced with Green Tea and Green Coffee extracts, as well as Pantothenic Acid (Vitamin B5) and Chromium. It is designed to Support Muscle Recovery and Tissue Repair.",   
+  Benefits: [
+      "L-Carnitine is an amino acid that plays a vital role in boosting the fat-burning metabolism in the body.",
+      "It helps transport fatty acids to the mitochondria, which are then burned for energy , leading to increased endurance and fat loss." ,
+    ],
+    howToUse:
+    "Take 1 serving (one scoop or 1-2 capsules depending on product form) 30 minutes before workout. On non-training days, take in the morning.",
+  warnings:
+    "Do not exceed the recommended dose. Not suitable for pregnant or breastfeeding women. Consult a healthcare professional if you have any medical conditions. Keep out of reach of children.",
+    storage: "Store in a cool, dry place away from sunlight."
+  },
+
+  
 ]
 
 export default function ProductPage() {

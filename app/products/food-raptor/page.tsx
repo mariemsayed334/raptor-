@@ -23,6 +23,9 @@ export default function ProductsPage() {
     { id: 7, name: " Sleep", image: "/raptor-sleep.jpg", category: "Wellness" },
     { id: 8, name: " V-Iron", image: "/raptor-v-iron.jpg", category: "Minerals" },
     { id: 9, name: " Vitamin C", image: "/raptor-vitamin-c.jpg", category: "Vitamins" },
+    { id: 10, name: "Ashwagandha", image: "/aswaga.jpeg", category: "Wellness" },
+    { id: 11, name: "Chelated Zinc", image: "/chelated.jpeg", category: "Minerals" },
+
     
   ]
 

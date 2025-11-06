@@ -25,6 +25,8 @@ export default function ProductsPage() {
     { id: 7, name: "Sleep", image: "/raptor-sleep.jpg" },
     { id: 8, name: "V-Iron", image: "/raptor-v-iron.jpg" },
     { id: 9, name: "Vitamin C", image: "/raptor-vitamin-c.jpg" },
+    { id: 10, name: "Ashwagagha", image: "/aswaga.jpeg" },
+    { id: 11, name: "Chelated Zinc ", image: "/chelated.jpeg" },
      
     
     

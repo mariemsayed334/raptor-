@@ -223,6 +223,52 @@ const products = [
     ]
   },
 
+  {
+    id: 10,
+    name: "Ashwagandha",
+    image: "/raptor-vitamin-c.jpg",
+    reviews: 98,
+    
+    fullDescription:
+    "A Non-GMO supplement containing Ashwagandha Root extract (standardized to Withanolides), a well-known adaptogen from Nature's Truth.",
+    howToUse:
+      "For adults aged 11 and over, you can consume 1 Tablet per day by dissolving it in 200ml of water. – You can use it whenever you want during the day.",
+
+    warnings:
+      "Use this product in conjunction with food as part of a healthy, balanced diet, not as a substitute for such. Keep out of the reach of the children. Don’t exceed the recommended daily dosage!",
+    storage:
+      "Store in a cool and dry place. Heat and sunlight may damage the bottle. — Made according to international specifications and standards, under the supervision of people specialized in this field.",
+    Benefits: [
+      "Reduce stress and anxiety.",
+      "Support cognitive function.",
+      "Help maintain energy levels.",
+      
+    ]
+  },
+
+  {
+    id: 11,
+    name: "Chelated Zinc",
+    image: "/raptor-vitamin-c.jpg",
+    reviews: 98,
+    
+      
+    fullDescription:
+    "A Vegan (Zinc Gluconate) supplement, Non-GMO and Gluten Free, providing 50 mg of Zinc per serving in a highly bioavailable chelated form.",
+    howToUse:
+      "For adults aged 11 and over, you can consume 1 Tablet per day by dissolving it in 200ml of water. – You can use it whenever you want during the day.",
+    warnings:
+      "Use this product in conjunction with food as part of a healthy, balanced diet, not as a substitute for such. Keep out of the reach of the children. Don’t exceed the recommended daily dosage!",
+    storage:
+      "Store in a cool and dry place. Heat and sunlight may damage the bottle. — Made according to international specifications and standards, under the supervision of people specialized in this field.",
+    Benefits: [
+      "Immune system function.",
+      "Cell growth and repair.",
+      "Metabolism.",
+      
+    ]
+  },
+
   
 ]
 

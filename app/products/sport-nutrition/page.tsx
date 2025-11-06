@@ -24,7 +24,7 @@ export default function sportNutrition() {
     { id: 8, name: " GLUTAMINE", image: "/glutamine.jpg",  },
      { id: 9, name: " AMINO ACID", image: "/amino acid.jpg",  },
      { id: 10, name: "ISO", image: "/iso.jpg", },
-     { id: 11, name: "MHEY", image: "/whey.jpg", },
+     { id: 11, name: "WHEY", image: "/whey.jpg", },
      { id: 12, name: "L-CRNITINE", image: "/Untitled-1.jpg", },
   ]
 

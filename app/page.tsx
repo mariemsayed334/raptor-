@@ -93,36 +93,10 @@ import Footer from "@/components/footer"
   <div className="w-full md:w-1/2 flex flex-col items-center gap-6">
 
     {/* Image */}
-    <img
-      src="/images/all.jpeg"
-      alt="Hero Product"
-      className="w-[260px] sm:w-[340px] md:w-[420px] rounded-2xl shadow-2xl object-cover"
-    />
-
-    {/* Nutrition Box */}
-    <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-2xl p-6 w-full max-w-sm text-center shadow-2xl">
-      <h3 className="text-white font-bold mb-4 text-lg uppercase tracking-widest">Nutrition Facts</h3>
-
-      <div className="text-white space-y-3 text-sm sm:text-base">
-        <div className="flex justify-between border-b border-white/20 pb-2">
-          <span className="opacity-90">Calories</span>
-          <span className="font-bold text-yellow-200">130</span>
-        </div>
-        <div className="flex justify-between border-b border-white/20 pb-2">
-          <span className="opacity-90">Proteins</span>
-          <span className="font-bold text-green-300">24g</span>
-        </div>
-        <div className="flex justify-between border-b border-white/20 pb-2">
-          <span className="opacity-90">Carbs</span>
-          <span className="font-bold text-blue-300">2g</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="opacity-90">Trans Fat</span>
-          <span className="font-bold text-red-300">0g</span>
-        </div>
-      </div>
+    <div style={{ padding: '2rem' }}>
+      <ImageSlider />
     </div>
-
+    
   </div>
 </div>
 

@@ -27,8 +27,7 @@ export default function ImageSlider() {
           transition: '0.5s ease',
         }}
       />
-
-     =
+      
       <div style={{ marginTop: '1rem', display: 'flex', justifyContent: 'center', gap: '0.5rem' }}>
         {images.map((_, index) => (
           <span

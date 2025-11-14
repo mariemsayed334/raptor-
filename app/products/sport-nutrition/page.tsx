@@ -51,7 +51,6 @@ export default function sportNutrition() {
   <Link href="/" className="hover:text-green-600">Home</Link> / 
   <span className="text-gray-700 font-semibold"> Sport Nutrition</span>
 </div>
-    {/* عنوان القسم */}
     <h1 className="text-4xl font-mono text-black-600 mb-30 mt-8 ml-50">
   Sport Nutrition
 </h1>

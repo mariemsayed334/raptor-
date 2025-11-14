@@ -13,6 +13,7 @@ import {
   MapPin,
   TrendingUp,
 } from "lucide-react"
+import ImageSlider from '@/components/ImageSlider';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Header from "@/components/header"
@@ -60,6 +61,7 @@ import Footer from "@/components/footer"
     <div className="min-h-screen bg-white">
       {/* Header */}
       <Header />
+      
 
       {/* Hero Section */}
 <div className="bg-gradient-to-br from-green-500 to-green-700 min-h-screen w-full overflow-x-hidden px-6 md:px-12 py-12 flex flex-col md:flex-row items-center justify-center gap-12">
@@ -197,6 +199,16 @@ import Footer from "@/components/footer"
               we're dedicated to supporting your wellness journey
             </p>
           </div>
+        
+    <div style={{ padding: '2rem' }}>
+      <ImageSlider />
+    </div>
+
+ 
+     
+   
+          
+
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center p-6 border-0 shadow-lg">

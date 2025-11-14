@@ -156,7 +156,7 @@ const sportNutrition = [
     name: "WHEY",
     image: "/whey.jpg",
     fullDescription:
-           " A 100% Premium Pre-Training Energy & Drink with 400 mg of Caffeine and a performance blend including Beta-Alanine, Arginine AKG, Citrulline Malate, and Taurine. It is designed for Extreme Workouts and Superior Results." ,
+      "A high-quality protein formula designed to support muscle growth and enhance post-workout recovery. It provides a balanced blend of essential amino acids that help repair muscle fibers, boost strength, and promote overall wellness and performance.",
    Benefits: [
       "Helps to increase muscle mass and support rapid recovery after workouts. ",
       "Provides the body with the necessary amino acids to repair muscle fibers and support overall health and well-being." 

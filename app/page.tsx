@@ -11,6 +11,7 @@ import {
   Phone,
   Mail,
   MapPin,
+  Building2,
   TrendingUp,
 } from "lucide-react"
 import ImageSlider from '@/components/ImageSlider';
@@ -20,7 +21,6 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
  import Link from "next/link"
  import { Apple, Dumbbell } from "lucide-react"
- import { Building2 } from "lucide-react"
  import CountUp from "react-countup";
  import React, { useState } from "react";
 
@@ -449,19 +449,25 @@ import Footer from "@/components/footer"
         </span>
       </div>
       <div className="flex items-start gap-4">
-  <Building2 className="w-6 h-6 text-green-600 mt-1" />
-  <div>
-    <p className="font-semibold text-gray-900 mb-1">Official distributor in Iraq</p>
-    <p className="text-gray-600">Fitness City</p>
+  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+    <Building2 className="h-5 w-5 text-primary" />
   </div>
+  <div>
+    <p className="text-sm font-medium text-foreground">
+      Official distributor in Iraq
+    </p>
+    <p className="text-sm text-muted-foreground">
+      Fitness City
+    </p>
+  </div>
+</div>
+
       <div className="flex items-center gap-4">
         <Phone className="w-6 h-6 text-green-700" />
         <span>009647702359478</span>
       </div>
     </div>
   </div>
-  <section/>
-  <div className="space-y-6 text-green-900">
 
   <div className="flex gap-4 mt-8">
     <div className="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">

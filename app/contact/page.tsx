@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook, Instagram, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Building2 } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -120,32 +121,30 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6 text-green-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone Support</h3>
-                    <p className="text-gray-600">+447426777871</p>
+                    <p className="text-gray-600">009647702359478</p>
                     <p className="text-sm text-gray-500">Monday - Friday, 9:00 AM - 6:00 PM GMT</p>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <Mail className="w-6 h-6 text-green-600 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email Support</h3>
-                    <p className="text-gray-600">Info@sublivita.com</p>
-                    <p className="text-sm text-gray-500">We typically respond within 24 hours</p>
-                  </div>
-                </div>
-
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-green-600 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
+                    <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                     <p className="text-gray-600">
-                      128 City Road
+                     8A Popin Business Centre 
                       <br />
-                      London EC1V 2NX
+                      Southway Road Wembley 
                       <br />
-                      United Kingdom
+                      HA9 0HF
                     </p>
                   </div>
+                  <div className="flex items-start gap-4">
+  <Building2 className="w-6 h-6 text-green-600 mt-1" />
+  <div>
+    <p className="font-semibold text-gray-900 mb-1">Official distributor in Iraq</p>
+    <p className="text-gray-600">Fitness City</p>
+  </div>
+</div>
+                  
                 </div>
               </div>
 

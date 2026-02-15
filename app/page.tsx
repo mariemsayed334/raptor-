@@ -11,7 +11,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  Building2,
   TrendingUp,
 } from "lucide-react"
 import ImageSlider from '@/components/ImageSlider';
@@ -440,32 +439,30 @@ import Footer from "@/components/footer"
 
     <div className="space-y-6 text-green-900">
       
-      <div className="flex items-center gap-4">
-        <MapPin className="w-6 h-6 text-green-700" />
-        <span>
-          8A Popin Business Centre 
-                    <br />
-          Southway Road Wembley HA9 0HF
-        </span>
-      </div>
-      <div className="flex items-start gap-4">
-  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-    <Building2 className="h-5 w-5 text-primary" />
-  </div>
-  <div>
-    <p className="text-sm font-medium text-foreground">
-      Official distributor in Iraq
-    </p>
-    <p className="text-sm text-muted-foreground">
-      Fitness City
-    </p>
-  </div>
+      {/* Address */}
+<div className="flex items-start gap-4">
+  <MapPin className="w-6 h-6 text-green-700 mt-1" />
+  <span>
+    8A Popin Business Centre <br />
+    Southway Road Wembley HA9 0HF
+  </span>
 </div>
 
-      <div className="flex items-center gap-4">
-        <Phone className="w-6 h-6 text-green-700" />
-        <span>009647702359478</span>
-      </div>
+{/* NEW LINE (Distributor) */}
+<div className="flex items-center gap-4">
+  <MapPin className="w-6 h-6 text-green-700" />
+  <span>
+    Official Distributor in Iraq <br />
+    Fitness City
+  </span>
+</div>
+
+{/* Phone */}
+<div className="flex items-center gap-4">
+  <Phone className="w-6 h-6 text-green-700" />
+  <span>009647702359478</span>
+</div>
+
     </div>
   </div>
 

@@ -438,20 +438,18 @@ import Footer from "@/components/footer"
     </div>
 
     <div className="space-y-6 text-green-900">
-      <div className="flex items-center gap-4">
-        <Phone className="w-6 h-6 text-green-700" />
-        <span>+905348133646</span>
-      </div>
-      <div className="flex items-center gap-4">
-        <Mail className="w-6 h-6 text-green-700" />
-        <span>Info@sublivita.com</span>
-      </div>
+      
       <div className="flex items-center gap-4">
         <MapPin className="w-6 h-6 text-green-700" />
         <span>
-          8A Popin Business Centre South Way Road,<br />
-          Wambley, United Kingdom, HA9 0HF
+          8A Popin Business Centre 
+                    <br />
+          Southway Road Wembley HA9 0HF
         </span>
+      </div>
+      <div className="flex items-center gap-4">
+        <Phone className="w-6 h-6 text-green-700" />
+        <span>009647702359478</span>
       </div>
     </div>
   </div>

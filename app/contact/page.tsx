@@ -116,15 +116,7 @@ export default function ContactPage() {
               </div>
 
               {/* Contact Details */}
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 text-green-600 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Phone Support</h3>
-                    <p className="text-gray-600">009647702359478</p>
-                    <p className="text-sm text-gray-500">Monday - Friday, 9:00 AM - 6:00 PM GMT</p>
-                  </div>
-                </div>
+              
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-green-600 mt-1" />
                   <div>
@@ -143,6 +135,15 @@ export default function ContactPage() {
     <p className="font-semibold text-gray-900 mb-1">Official distributor in Iraq</p>
     <p className="text-gray-600">Fitness City</p>
   </div>
+  <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <Phone className="w-6 h-6 text-green-600 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Phone Support</h3>
+                    <p className="text-gray-600">009647702359478</p>
+                    <p className="text-sm text-gray-500">Monday - Friday, 9:00 AM - 6:00 PM GMT</p>
+                  </div>
+                </div>
 </div>
                   
                 </div>

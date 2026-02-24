@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="flex gap-4">
               
               <a 
-  href="https://www.instagram.com/raptornutrition928?igsh=MXJ3N2hyMm00dHA2aw%3D%3D&utm_source=qr"  // هنا حطي اللينك بتاعك
+  href="https://www.instagram.com/username"  // هنا حطي اللينك بتاعك
   target="_blank"  // يفتح في تبويب جديد
   rel="noopener noreferrer"  // أمان
   className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-100 transition-colors"

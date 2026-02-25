@@ -1,8 +1,6 @@
 "use client"
 import {
- 
   Instagram,
-
   Leaf,
   Shield,
   Heart,
@@ -102,15 +100,11 @@ import Footer from "@/components/footer"
 
 {/* Social Icons (visible only on large screens) */}
 <div className="hidden lg:flex flex-col gap-3 fixed right-6 top-1/3 z-50">
-  <a href="https://wa.me/201234567890" target="_blank" className="bg-green-500 p-3 rounded-full shadow-lg">
-    <img src="/whatsapp (1).png" alt="WhatsApp" className="w-6 h-6" />
-  </a>
-  <a href="https://instagram.com/yourpage" target="_blank" className="bg-pink-500 p-3 rounded-full shadow-lg">
+  
+  <a href="https://www.instagram.com/raptornutrition928?igsh=MXJ3N2hyMm00dHA2aw%3D%3D&utm_source=qr" target="_blank" className="bg-pink-500 p-3 rounded-full shadow-lg">
     <img src="/instagram.png" alt="Instagram" className="w-6 h-6" />
   </a>
-  <a href="tel:+201234567890" className="bg-blue-500 p-3 rounded-full shadow-lg">
-    <img src="/communication.png" alt="Phone" className="w-6 h-6" />
-  </a>
+  
 </div>
 
 

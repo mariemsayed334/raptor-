@@ -1,8 +1,8 @@
 "use client"
 import {
-  Facebook,
+ 
   Instagram,
-  MessageCircle,
+
   Leaf,
   Shield,
   Heart,
@@ -467,15 +467,16 @@ import Footer from "@/components/footer"
   </div>
 
   <div className="flex gap-4 mt-8">
-    <div className="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
-      <MessageCircle className="w-5 h-5 text-green-700 hover:text-white" />
-    </div>
-    <div className="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
-      <Facebook className="w-5 h-5 text-green-700 hover:text-white" />
-    </div>
-    <div className="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
-      <Instagram className="w-5 h-5 text-green-700 hover:text-white" />
-    </div>
+    
+    
+    <a 
+  href="https://www.instagram.com/raptornutrition928?igsh=MXJ3N2hyMm00dHA2aw%3D%3D&utm_source=qr"  // هنا حطي اللينك بتاعك
+  target="_blank"  // يفتح في تبويب جديد
+  rel="noopener noreferrer"  // أمان
+  className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-100 transition-colors"
+>
+  <Instagram className="w-5 h-5 text-green-600" />
+</a>
   </div>
 </div>
     {/* العمود الأيمن - نموذج الاتصال */}
